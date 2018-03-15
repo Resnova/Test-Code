@@ -11,14 +11,15 @@ print "\nPCB Numbers Available\n", number
 
 barcode = int(raw_input('\nEnter the Barcode INPUT\n'))
 print "\nYou have entered ",barcode,"\n"
+if barcode<=panelSize:
+   temp = 0
+   newpcb=pcb
+   while barcode > pcb:
+      pcb+=newpcb
+      temp+=1
 
-temp = pcb
-newpcb = pcb
-while (barcode>=newpcb):
-   
-   
-
-
-temp-pcb
-for x in range (temp, temp+pcb):
-   print "PCB available are\n" x 
+   temp2=temp*newpcb
+   for x in range (temp2, temp2+newpcb):
+      print "PCB available are\n", x+1 
+else:
+   print "!!...SORRY PCB BARCODE NOT REGISTERED...!!"
